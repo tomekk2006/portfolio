@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+	<style>
+		html {
+			height: 100%;
+			background-color: black;
+		}
+		body {
+			overflow: hidden;
+			height: 100%;
+			margin: 0;
+		}
+		#hello {
+			position: absolute;
+			width: 256px;
+			background-color: red;
+			background-size: cover;
+		}
+	</style>
+	<script>
+		function sleep() {
+			incr();
+			setTimeout(() => {sleep();}, tick);
+		}
+		
+		const speed = 3;
+		let xdir = 1;
+		let ydir = 1;
+		let color = 0;
+		const tick = 20;
+		function incr() {
+			if (document.getElementById('hello').getBoundingClientRect().left > document.body.getBoundingClientRect().width-document.getElementById('hello').getBoundingClientRect().width) {
+				xdir = -1;
+				color = (Math.random() * 360);
+			}
+			if (document.getElementById('hello').getBoundingClientRect().left < 0) {
+				xdir = 1;
+				color = (Math.random() * 360);
+			}
+			if (document.getElementById('hello').getBoundingClientRect().top > document.body.getBoundingClientRect().height-document.getElementById('hello').getBoundingClientRect().height) {
+				ydir = -1;
+				color = (Math.random() * 360);
+			}
+			if (document.getElementById('hello').getBoundingClientRect().top < 0) {
+				ydir = 1;
+				color = (Math.random() * 360);
+				
+			}
+			color = color+0.25;
+			console.log(color);
+			if (color >= 360) {
+				color = 0;
+			}
+			document.getElementById('hello').style.backgroundColor = `hsl(${color}, 100%, 50%`;
+			
+			document.getElementById('hello').style.left = (document.getElementById('hello').getBoundingClientRect().left + speed * xdir) + "px";
+			document.getElementById('hello').style.top = (document.getElementById('hello').getBoundingClientRect().top + speed * ydir) + "px";
+		}
+	</script>
+</head>
+
+<body onload="sleep();">
+	<img src="logo.png" id="hello">
+</body>
