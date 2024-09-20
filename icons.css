@@ -1,0 +1,18 @@
+#java {
+    list-style-image: url(java.png);
+}
+#python {
+    list-style-image: url(python.png);
+}
+#js {
+    list-style-image: url(js.png);
+}
+#css {
+    list-style-image: url(css.png);
+}
+#html {
+    list-style-image: url(html.png);
+}
+#php {
+    list-style-image: url(php.png);
+}

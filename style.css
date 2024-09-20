@@ -1,0 +1,100 @@
+body {
+    background-color: black;
+    margin:0;
+}
+.square-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+.square-text {
+    font-weight: bold;
+    font-size: large;
+    margin:4px;
+    color:white;
+    text-shadow: 1px 1px black;
+}
+.square {
+    display: block;
+    
+    background-color: rgb(128, 128, 128);
+    width:96px;
+    height:96px;
+    display: flex;
+    align-items: flex-end;
+    transition: 0.2s ease-out;
+    font-family: monospace;
+}
+
+.selectable:hover {
+    scale: 150%;
+    z-index: 1;
+    box-shadow: 0 0 32px rgba(122,93,255,0.5);
+}
+
+#s5 {
+    background-color: transparent;
+}
+.top {
+    background: linear-gradient(to bottom, rgb(177, 36, 234), rgb(111, 83, 232));
+}
+.bottom {
+    background: linear-gradient(to bottom,rgb(111, 83, 232),rgb(46, 135, 230));
+}
+.selectable.top {
+    background: linear-gradient(to bottom, rgba(195,37,255,1), rgba(122,93,255,1));
+}
+.selectable.bottom {
+    background: linear-gradient(to bottom,rgba(122,93,255,1), rgba(49,148,255,1));
+}
+#s4 {
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+}
+#s8 {
+    clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+    background: linear-gradient(to bottom,rgba(122,93,255,1), rgba(49,148,255,1));
+}
+.c1 {
+    top: calc(50% - 100px);
+    background-color: rgba(195,37,255,0.5);
+}
+.c2 {
+    top: calc(50% + 100px);
+    background-color: rgba(49, 149, 255, 0.5);
+}
+.circle {
+    position: fixed;
+    left: 50%;
+    translate: -50% -50%;
+    width: 512px;
+    height: 250px;
+    border-radius: 100%;
+    filter: blur(128px);
+}
+.content a {
+    display: block;
+    padding: 16px;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: rgb(48, 48, 48);
+    margin-bottom: 1px;
+}
+.content a:hover {
+    background-color: white;
+    color:black;
+}
+
+@media only screen and (max-width: 400px) {
+    .square {
+        width: 64px;
+        height: 64px;
+    }
+    .square-text {
+        font-size: small;
+    }
+}

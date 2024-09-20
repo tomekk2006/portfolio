@@ -1,0 +1,214 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show(x) {
+            x.textContent = "(505) 503-CALL";
+            console.log("Hello")
+        }
+        function hide(x) {
+            x.textContent = "Call Saul Now";
+        }
+        
+        document.addEventListener("scroll", (event) => {
+            console.log(window.scrollY)
+            if (window.scrollY > 0) {
+                document.getElementById('nav').style.boxShadow = "0px 0px 10px black";
+            }
+            else {
+                document.getElementById('nav').style.boxShadow = "0px 0px 0px black";
+            }
+        });
+    </script>
+    <style>
+        body {margin: 0; background-color: beige;}
+        .pacifico-regular {
+            font-family: "Pacifico", cursive;
+            font-weight: 400;
+            font-style: normal;
+            
+        }          
+        .bakbak-one-regular {
+            font-family: "Bakbak One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color:brown;
+        }
+        .roboto-bold {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+          }
+        p, li {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 14pt;
+        }
+        li {
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        li svg {
+            float:left;
+            height:24px;
+            padding-right: 10px;
+            
+        }
+        ul {
+            list-style: none;
+            padding:0;
+        }
+        h2, h3 {
+            display: inline-block;
+            font-family: "Bakbak One", sans-serif;
+            font-weight: 400;
+        }
+        h2 {
+            margin: 20px 20px 0 0 ; font-size: 22pt;
+        }
+        h3 {color: dimgray; margin: 20px 0; font-size: 16pt;}
+        nav {
+            background-color: orange;
+            height: 64px;
+            display:flex;
+            align-items: center;
+            position: sticky;
+            top:0;
+            padding:8px;
+            transition: box-shadow 0.2s;
+        }
+        nav a {
+            color: black;
+            margin: 0 5px;
+            padding: 10px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            text-decoration: none;
+        }
+        nav svg {
+            padding:8px;
+        }
+        header {
+            background-color: orange;
+            padding:0 16px 0 16px;
+            
+        }
+        .button {
+            background-color: brown;
+            color:beige;
+        }
+        #banner_text {
+            text-align: center;
+            max-width: 300px;
+        }
+        #banner_image {
+            max-width: 300px;
+        }
+        #banner_image img {
+            max-width: 100%;
+        }
+        #banner {display: flex;
+            flex-wrap: wrap;
+        justify-content: center;}
+        section {
+            max-width: 800px;
+            margin: auto;
+            padding: 16px
+        }
+        @media screen and (min-width: 1200px) {
+            h1 {
+                font-size: 32pt;
+                
+            }
+            #banner_text {
+                max-width: 450px;
+            }
+            #banner_image {
+                max-width: 450px;
+            }
+            
+        }
+        #burger {
+            display: none;
+        }
+        @media screen and (max-width: 550px) {
+            .hide {
+                display: none;
+            }
+            nav {justify-content: space-between;}
+            #burger {
+                display: block;
+            }
+        }
+        footer {
+            background-color: black;
+            padding:32px;
+            color:white;
+            font-family: "Roboto", sans-serif;;
+        }
+        footer a {
+            color: white;
+            text-decoration: underline dotted;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Martian+Mono:wght@700&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="nav">
+        <svg class="hide" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" class="lucide lucide-scale"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
+        <a href="" class="hide">Home</a>
+        <a href="" class="hide">About</a>
+        <a href="" class="hide">Practice Areas</a>
+        <a class="button" href="" onmouseover="show(this)" onmouseout="hide(this)">Call Saul Now</a>
+        <svg id="burger" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+    </nav>
+    <header>
+    
+    <div id="banner">
+        <div id="banner_text">
+            <h1 class="bakbak-one-regular">IN LEGAL TROUBLE?</h1>
+            <h1 class="pacifico-regular">"Better Call Saul"</h1>
+        </div>
+        <div id="banner_image">
+            <img alt="" src="https://www.pngall.com/wp-content/uploads/14/Saul-Goodman-PNG.png">
+        </div>
+    </div>
+    
+
+    
+    
+    
+    </header>
+    <section>
+        <h2>Saul Goodman<h3 stlye="inline">Attorney at Law</h3></h2>
+        <p>Hi, I’m Saul Goodman. Did you know that you have rights? The Constitution says you do. And so do I. I believe that until proven guilty, every man, woman, and child in this country is innocent. And that’s why I fight for you, Albuquerque!</p>
+        <h2>Practice Areas</h2>
+        <ul>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-car-front"><path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8"/><path d="M7 14h.01"/><path d="M17 14h.01"/><rect width="18" height="8" x="3" y="10" rx="2"/><path d="M5 18v2"/><path d="M19 18v2"/></svg> Driving accident
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg> Workplace Misconduct
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg> Insurance claims
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gem"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg> Theft
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-venetian-mask"><path d="M2 12a5 5 0 0 0 5 5 8 8 0 0 1 5 2 8 8 0 0 1 5-2 5 5 0 0 0 5-5V7h-5a8 8 0 0 0-5 2 8 8 0 0 0-5-2H2Z"/><path d="M6 11c1.5 0 3 .5 3 2-2 0-3 0-3-2Z"/><path d="M18 11c-1.5 0-3 .5-3 2 2 0 3 0 3-2Z"/></svg> Fruad
+            </li>
+        </ul>
+    </section>
+    <footer>
+        Copyright © 2024 <a href="https://tomekk.co.uk">Tomasz Kloczko</a>. This is a parody website.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tomekk</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="window.css">
+    <link rel="stylesheet" href="icons.css">
+    <script>
+        function closeElement(id) {
+            document.getElementById(id).style.animationName = 'closeWindow';
+        }
+        function openElement(id) {
+            closeAll()
+            document.getElementById(id).style.display = 'flex';
+            document.getElementById(id).style.animationName = 'openWindow';
+        }
+        function closeAll() {
+            document.getElementById('aboutme').style.animationName = 'closeWindow';
+            document.getElementById('projects').style.animationName = 'closeWindow';
+            document.getElementById('links').style.animationName = 'closeWindow';
+        }
+    </script>
+</head>
+<body>
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="square-container">
+        <div onclick="openElement('aboutme')" class="square selectable top" id="s1">
+            <span class="square-text">About me</span>
+        </div>
+        <div class="square top" id="s2"></div>
+        <div onclick="openElement('links')" class="square selectable top" id="s3">
+            <span onclick="openElement('socials')" class="square-text">Links</span>
+        </div>
+        <div class="square top" id="s4"></div>
+        <div class="square" id="s5"></div>
+        <div onclick="openElement('projects')" class="square selectable bottom" id="s6">
+            <span class="square-text">Projects</span>
+        </div>
+        <div class="square bottom" id="s7"></div>
+        <div class="square bottom" id="s8"></div>
+    </div>
+
+    <div class="window-container">
+        <div class="window" id="aboutme">
+            <div class="content">
+                <h2>About me</h2>
+                <p>My name is tomekk. I'm a Polish programmer studying in Scotland. I have self taught myself to code for 4 years. I'm passionate for computing science since the start of high school and now I'm taking a college course in computing.</p>
+                <h3>Languages</h3>
+                <ul>
+                    <li id="python">Python</li>
+                    <li id="js">Javascript</li>
+                    <li id="html">HTML</li>
+                    <li id="css">CSS</li>
+                    <li id="php">PHP</li>
+                    <li id="java">Java</li>
+                </ul>
+                <h3>What I do</h3>
+                <p>In the past I have participated in game jams hosted on Itch. I started off creating Scratch game and later moved on to using a javascript based engine called GDevelop.</p>
+                <p>I have always a creative. I have made various sketches, designs and over arts. I always aimed to make a project apealing for the eye, no matter the size of the project.</p>
+                <p>I recently have shifted my work into creating e-commerce websites. It combines everything I like doing; coding, design and functionality.</p>
+            </div>
+            <div class="close" onclick="closeElement('aboutme')">X</div>
+        </div>
+        <div class="window" id="projects">
+            <div class="content">
+                <h2>Projects</h2>
+                <h3>Ultimate Tic Tac Toe</h3>
+                <img src="./content/tictactoe.png">
+                <p>Ultimate Tic Tac Toe was an idea I got from a VSause video. It's a game based on being 2 steps ahead of the opponent.</p>  
+                <h3>Screensaver</h3>
+                <img src="./content/screensaver.png">
+                <p>The DVD logo bouncing across the screen. Used it as my wallpaper.</p>
+                <h3>Chaos Mike</h3>
+                <img src="./content/chaosmike.gif">
+                <p>A game I made for the first GDevelop game jam. I have won 5th place in community votes but I didn't claim the prize.</p>
+                <h3>Fox Ambush</h3>
+                <img src="./content/foxambush.png">
+                <p>Created for an easter themed game jam. This is a game most people found easy and fun to play. You collect vegetables and sprint to survive.</p>
+                <h3>Better Call Saul Website</h3>
+                <img src="./content/bettercallsaul.png">
+                <p>I made a website to advertise Saul Goodman and his legal work.</p>
+            </div>
+            <div onclick="closeElement('projects')" class="close">X</div>
+        </div>
+        <div class="window" id="links">
+            <div class="content">
+                <h2>Links</h2>
+                <h3>Socials</h3>
+                <a href="">Youtube</a>
+                <a href="">Github</a>
+                <h3>My Games</h3>
+                <a href="">Ultimate Tic Tac Toe</a>
+                <a href="">Fox Ambusz</a>
+                <a href="">Chaos Mike</a>
+                <h3>Projects</h3>
+                <a href="">Screensaver</a>
+                <a href="">Better Call Saul</a>
+            </div>
+            <div onclick="closeElement('links')" class="close">X</div>
+        </div>
+    </div>
+    
+</body>
+</html>
