@@ -18,7 +18,7 @@
 .content p, h2, h3, ul {
     color:white;
     font-family: Helvetica, sans-serif;
-    margin: 16px;
+    margin: 12px 16px;
     
 }
 .content {
@@ -52,22 +52,23 @@
     flex-direction: column;
 }
 @keyframes openWindow {
-    from {
+    0% {
         scale: 0%;
         translate: 0 50vh;
     }
-    to {
+    100% {
         scale: 100%;
         translate: 0 0;
     }
 }
 
 @keyframes closeWindow {
-    from {
+    0% {
+        display: flex;
         scale: 100%;
         translate: 0 0;
     }
-    to {
+    100% {
         scale: 0%;
         translate: 0 50vh;
         display: none;

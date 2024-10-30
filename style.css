@@ -2,6 +2,7 @@ body {
     background-color: black;
     margin:0;
 }
+
 .square-container {
     display: grid;
     justify-content: center;
@@ -97,4 +98,20 @@ body {
     .square-text {
         font-size: small;
     }
+}
+button {
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 16px;
+    margin: auto;
+    display: block;
+    margin-bottom: 16px;
+}
+button:hover {
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+
 }

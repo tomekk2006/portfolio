@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
     <title>tomekk</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="icons.css">
     <script>
         function closeElement(id) {
+            document.getElementById(id).style.display = '';
             document.getElementById(id).style.animationName = 'closeWindow';
         }
         function openElement(id) {
@@ -48,7 +49,7 @@
         <div class="window" id="aboutme">
             <div class="content">
                 <h2>About me</h2>
-                <p>My name is tomekk. I'm a Polish programmer studying in Scotland. I have self taught myself to code for 4 years. I'm passionate for computing science since the start of high school and now I'm taking a college course in computing.</p>
+                <p>My name is Tomasz Kłoczko. I'm a Polish programmer studying in Scotland. I have self taught myself to code for 4 years. I'm passionate for computing science since the start of high school and now I'm taking a college course in computing.</p>
                 <h3>Languages</h3>
                 <ul>
                     <li id="python">Python</li>
@@ -56,7 +57,7 @@
                     <li id="html">HTML</li>
                     <li id="css">CSS</li>
                     <li id="php">PHP</li>
-                    <li id="java">Java</li>
+                    <li id="cs">C#</li>
                 </ul>
                 <h3>What I do</h3>
                 <p>In the past I have participated in game jams hosted on Itch. I started off creating Scratch game and later moved on to using a javascript based engine called GDevelop.</p>
@@ -68,21 +69,31 @@
         <div class="window" id="projects">
             <div class="content">
                 <h2>Projects</h2>
+                <h3>DVD Game</h3>
+                <img src="./content/showcase-dvd.gif">
+                <p>The DVD logo bounces into walls, changing the direction of gravity. Avoid the DVD logo and other obstacles is spawns.</p>  
+                <button onclick='window.open("https:\/\/tomekk06.itch.io/dvgravity");'>Play the game</button>
                 <h3>Ultimate Tic Tac Toe</h3>
                 <img src="./content/tictactoe.png">
                 <p>Ultimate Tic Tac Toe was an idea I got from a VSause video. It's a game based on being 2 steps ahead of the opponent.</p>  
+                <button onclick='window.open("https:\/\/tomekk2006.github.io/tictactoe");'>View the website</button>
+                
                 <h3>Screensaver</h3>
                 <img src="./content/screensaver.png">
                 <p>The DVD logo bouncing across the screen. Used it as my wallpaper.</p>
+                <button onclick='window.open("./projects/screensaver/");'>View the website</button>
                 <h3>Chaos Mike</h3>
                 <img src="./content/chaosmike.gif">
                 <p>A game I made for the first GDevelop game jam. I have won 5th place in community votes but I didn't claim the prize.</p>
+                <button onclick='window.open("https:\/\/tomekk06.itch.io/chaos-mike");'>Play the game</button>
                 <h3>Fox Ambush</h3>
                 <img src="./content/foxambush.png">
                 <p>Created for an easter themed game jam. This is a game most people found easy and fun to play. You collect vegetables and sprint to survive.</p>
+                <button onclick='window.open("https:\/\/tomekk06.itch.io/fox-ambush");'>Play the game</button>
                 <h3>Better Call Saul Website</h3>
                 <img src="./content/bettercallsaul.png">
                 <p>I made a website to advertise Saul Goodman and his legal work.</p>
+                <button onclick='window.open("./projects/bettercallsaul/");'>View the website</button>
             </div>
             <div onclick="closeElement('projects')" class="close">X</div>
         </div>
@@ -93,13 +104,10 @@
                 <a href="https://youtube.com/@tk06">Youtube</a>
                 <a href="https://github.com/tomekk2006">Github</a>
                 <a href="https://tomekk06.itch.io/">itch.io</a>
-                <h3>My Games</h3>
-                <a href="https://tomekk2006.github.io/tictactoe">Ultimate Tic Tac Toe</a>
-                <a href="https://tomekk06.itch.io/fox-ambush">Fox Ambush</a>
-                <a href="https://tomekk06.itch.io/chaos-mike">Chaos Mike</a>
-                <h3>Projects</h3>
-                <a href="./projects/screensaver/">Screensaver</a>
-                <a href="./projects/bettercallsaul/">Better Call Saul</a>
+                <h3>Contact</h3>
+                <a href="https://t.me/tomekk06">Telegram</a>
+                <a href="https://x.com/tomekk06">Twitter/X</a>
+                
             </div>
             <div onclick="closeElement('links')" class="close">X</div>
         </div>
